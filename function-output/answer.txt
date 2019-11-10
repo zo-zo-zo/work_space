@@ -1,0 +1,152 @@
+演習問題１　番号　1,2,4,5,10
+10はシンボル、一見文字列ですが、内部的には整数として扱われるとのこと
+
+演習問題２　
+１puts "DIVE INTO CODE"
+２puts "私は受験生です"
+３puts "30歳です"
+def introduce(age)
+  puts "#{age}歳です"
+end
+introduce(30)
+
+演習問題３
+puts 5 [+] 5 == 10
+puts 8 [-] 3 == 5
+puts 5 [*] 5 == 25
+puts 40 [/] 5 == 8
+puts 28 [%] 6 ==  4
+
+演習問題４
+puts 10 [<] 8 == false
+puts 30 [>] 25 == true
+puts 15 [ == ] 15 == true(等しいのみを表す記号)
+puts 20 [>] 30 == false
+puts 8 [<] 10 == true
+
+演習問題５
+puts 30 == 29 false
+puts 15 < 59  true
+puts 30 >= 30 true
+puts 10 = 10  false →　比較できない
+puts 60 < 100 true
+puts 100 > 200false
+puts 40 <= 40 true
+puts 50 <= 30 false
+puts 30 .. 40 false →　比較できない
+puts 20 != 20 false
+
+演習問題６
+name = "山田太郎"
+age  = 18
+puts name
+puts age
+
+演習問題７
+puts "私の名前は#{name}です。年齢は#{age}です"
+
+演習問題８
+season = ["春","夏","秋"]
+puts season
+season << "冬"
+puts season
+
+puts season[2]
+
+演習問題９
+house = {price:"2000万",location:"東京都",size:"100坪"}
+
+puts house[:location]
+
+p house[:location]
+
+演習問題１０
+house = [{price:"2000万",location: "東京都",size:"80坪"},{price:"1500万",location:"千葉県",size:"50坪"},{price:"800万",location:"埼玉県",size:"100坪"}]
+
+p house [1][:location]
+p house [0][:size]
+p house [2][:price,:size]❌
+p house [2][:price],house[2][:size]
+
+演習問題１１
+num = 5
+if num >= 50
+  puts "50以上だよ"
+end
+
+if num < 50
+  puts "50未満だよ"
+end
+
+演習問題１１−２
+num = 30
+if num >= 50
+  puts "50以上だよ"
+elsif num = 30
+  puts "30ジャストだよ"
+else
+  puts "50未満だよ"
+end
+
+演習問題１２
+num = 20
+if num % 2 == 0
+  puts "numは偶数"
+else
+  puts "numは奇数"
+end
+
+演習問題１３
+i = 0
+while i < 10
+  puts "あいさつ"
+  i += 1
+end
+
+演習問題１４❌
+for i in 0..9 do ❌
+  puts "こんにちは"
+end
+
+for i in 1..10 do⭕️
+  puts "こんにちは"
+end
+
+演習問題１５
+10 .times do
+  puts "こんばんは"
+end
+
+演習問題１６
+[1,2,3,4,5,6,7,8,9,10].each do |number|
+  puts number
+end
+
+演習問題１７
+def addition(x,y,z)
+  puts x + y
+end
+addition(2,3,7)
+
+演習問題１７−５
+def addition(x,y,z)
+  puts (x + y + z)/3
+end
+addition(2,3,7)
+
+演習問題１８
+def division(x,y)
+  puts x/y
+end
+division(10,5)
+
+演習問題１９
+エラーです。
+
+演習問題２０
+def doing(date, place, food)
+  (return)puts "#{date}は#{place}で#{food}を食べる"
+end
+
+puts doing("今日","渋谷","カレー")
+puts doing("明日","池袋","オムライス")

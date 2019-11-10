@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DOM操作入門</title>
+</head>
+<body>
+  <form>
+    <input type="text" name="" id="name"/>
+    <input value="追加" id="btn"/>
+  </form>
+  <h3>TODOリスト</h3>
+  <ul id="lists"></ul>
+  <script>
+    const lists =document.getElementById('lists');
+    const target = document.getElementById('btn');
+    target.addEventListener('click',　function() {
+      const form = document.getElementById('name');
+      const list = document.createElement('li');
+      if (form.value == ""){
+        window.alert('TODOを入力してください。');
+      }
+      else{
+        list.textContent = form.value;
+        lists.appendChild(list);
+        form.value = "";
+      }
+    },false);
+  </script>
+</body>
+</html>
